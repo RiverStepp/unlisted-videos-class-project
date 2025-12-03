@@ -2,8 +2,6 @@ using MongoDB.Driver;
 using Microsoft.Extensions.Options;
 using YouTubeDataAPI.Models;
 using YouTubeDataAPI.Services;
-using Elastic.Clients.Elasticsearch;
-using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Mongo config
 builder.Services.Configure<MongoDbSettings>(
     builder.Configuration.GetSection("MongoDbSettings"));
 
@@ -29,16 +28,15 @@ builder.Services.AddScoped(sp =>
 
 builder.Services.AddScoped<VideosService>();
 
+// Elasticsearch config (HTTP client, no typed ES client)
 builder.Services.Configure<ElasticSettings>(
     builder.Configuration.GetSection("Elasticsearch"));
 
-builder.Services.AddSingleton(sp =>
+builder.Services.AddHttpClient<VideosSearchService>((sp, client) =>
 {
     var cfg = sp.GetRequiredService<IOptions<ElasticSettings>>().Value;
-    return new ElasticsearchClient(new Uri(cfg.Url));
+    client.BaseAddress = new Uri(cfg.Url); // e.g. http://localhost:9200
 });
-
-builder.Services.AddScoped<VideosSearchService>();
 
 var app = builder.Build();
 
