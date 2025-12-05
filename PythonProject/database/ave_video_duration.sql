@@ -1,0 +1,1 @@
+SELECT AVG(V_Duration) FROM Video

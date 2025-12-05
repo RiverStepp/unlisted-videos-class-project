@@ -1,0 +1,29 @@
+{
+    "video_count": 11364,
+    "channel_count": 1423,
+    "playlist_count": 380,
+    "avg_video_duration": 1236,
+    "avg_video_views": 32254276,
+    "avg_video_likes": 7386,
+    "longest_playlist": {
+        "P_Title": "??? COMPLETO    ??? COMPLETO   ??? COMPLETO",
+        "total_duration": 11995
+    },
+    "avg_playlist_duration": 102.68307692307692,
+    "top_video_by_views": {
+        "V_Title": "3 Doors Down - Kryptonite (Official Video)",
+        "V_Views": 536053327
+    },
+    "top_video_by_likes": {
+        "V_Title": "KTB1 v497 04BuddyIntroNew2DBoxRevers+02VirusHose 1080X1920 37s AI EN",
+        "V_Likes": 2161562
+    },
+    "top_video_by_duration": {
+        "V_Title": "Full Version | The man in a comic book fell in love with a girl from another world|[The Next Stop W]",
+        "V_Duration": 11995
+    },
+    "top_channel_by_videos": {
+        "C_Name": "Alice Letts",
+        "video_count": 324
+    }
+}

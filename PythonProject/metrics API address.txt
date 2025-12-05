@@ -1,0 +1,2 @@
+metrics API address
+PS C:\Users\carve> Invoke-RestMethod http://localhost:8000/metrics

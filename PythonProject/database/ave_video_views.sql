@@ -1,0 +1,1 @@
+SELECT AVG(V_Views) FROM Video
