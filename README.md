@@ -30,3 +30,8 @@ Navigate to frontend folder and type "npm run dev"
 Open docker desktop  
 Once docker desktop is opened open powershell and run "docker start es-dev"  
 Clean, rebuild, and run the visual studio solution  
+
+**Contributors:** 
+Carver Ossoff
+River Stepp
+Quynh Tran 
