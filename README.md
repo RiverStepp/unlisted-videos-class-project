@@ -12,11 +12,14 @@ cd into backend folder
 Install docker desktop & start docker  
 Install elasticsearch server from powershell with this command:  
 Install & run the elasticsearch server from powershell using this command:  
-"docker run --name es-dev `  
+```powershell
+docker run --name es-dev `
   -p 9200:9200 `
-  -e "discovery.type=single-node" `  
-  -e "xpack.security.enabled=false" `  
-  docker.elastic.co/elasticsearch/elasticsearch:8.15.0"  
+  -e "discovery.type=single-node" `
+  -e "xpack.security.enabled=false" `
+  docker.elastic.co/elasticsearch/elasticsearch:8.15.0
+```
+
 After this, clean, rebuild, and run the visual studio solution to start the API  
 
 ### Scripts:  
